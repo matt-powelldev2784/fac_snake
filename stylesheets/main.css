@@ -1,0 +1,31 @@
+:root {
+  --primary-red: #d31e52;
+  --secondary-grey: #7c8390;
+  --tertiary-white: #ffffff;
+  --quad-grey: #eeeeee;
+  --primary-black: black;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  /* border: 1px solid green; */
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: unset;
+  text-decoration: none;
+}
+
+*:focus-visible {
+  border: 3px solid grey;
+  outline: none;
+}
