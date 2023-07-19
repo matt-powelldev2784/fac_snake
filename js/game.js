@@ -4,6 +4,7 @@ import {
   drawSnake,
   checkEdgeCollision,
   checkFoodCollision,
+  eatFood,
 } from './snake.js'
 import { addFood, foodOnBoard, setFoodOnBoard } from './food.js'
 
@@ -28,8 +29,8 @@ window.requestAnimationFrame(runGame)
 
 export const updateGame = () => {
   if (checkFoodCollision()) {
-    document.querySelector('.food').remove()
-    setFoodOnBoard(false)
+    eatFood()
+    return
   }
   updateSnake()
 }
