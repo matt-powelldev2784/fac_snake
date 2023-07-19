@@ -1,26 +1,31 @@
-import { hasMoved, setHasMoved } from './snake.js'
+import {
+  hasMoved,
+  setHasMoved,
+  setMoveDirection,
+  moveDirection,
+} from './snake.js'
 
 export const changeDirection = (event) => {
   if (!hasMoved) return
   if (event.key === 'ArrowUp' && moveDirection !== 'down') {
-    moveDirection = 'up'
+    setMoveDirection('up')
     setHasMoved(false)
     return
   }
   if (event.key === 'ArrowDown' && moveDirection !== 'up') {
-    moveDirection = 'down'
+    setMoveDirection('down')
     setHasMoved(false)
     return
   }
 
   if (event.key === 'ArrowLeft' && moveDirection !== 'right') {
-    moveDirection = 'left'
+    setMoveDirection('left')
     setHasMoved(false)
     return
   }
 
   if (event.key === 'ArrowRight' && moveDirection !== 'left') {
-    moveDirection = 'right'
+    setMoveDirection('right')
     setHasMoved(false)
     return
   }

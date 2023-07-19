@@ -14,3 +14,11 @@ export const checkFoodCollision = () => {
       : false
   return foodCollison
 }
+
+export const checkSnakeOnSnakeCollision = () => {
+  const snakeOnSnakeCollision = snakeBody.some((segment, index) => {
+    if (index === 0) return false
+    return segment.x === snakeBody[0].x && segment.y === snakeBody[0].y
+  })
+  return snakeOnSnakeCollision
+}

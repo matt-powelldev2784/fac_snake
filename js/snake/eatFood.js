@@ -1,3 +1,6 @@
+import { setFoodOnBoard } from '../food.js'
+import { moveDirection, snakeBody } from './snake.js'
+
 export const eatFood = () => {
   document.querySelector('.food').remove()
   setFoodOnBoard(false)
