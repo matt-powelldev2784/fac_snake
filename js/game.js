@@ -1,13 +1,10 @@
-import {
-  SNAKE_SPEED,
-  updateSnake,
-  drawSnake,
-  checkEdgeCollision,
-  checkFoodCollision,
-  eatFood,
-  changeDirection,
-} from './snake.js'
-import { addFood, foodOnBoard, setFoodOnBoard } from './food.js'
+import { SNAKE_SPEED } from './snake/snake.js'
+import { drawSnake } from './snake/drawSnake.js'
+import { addFood, foodOnBoard } from './food.js'
+import { moveSnake } from './snake/moveSnake.js'
+import { checkEdgeCollision, checkFoodCollision } from './snake/collision.js'
+import { eatFood } from './snake/eatFood.js'
+import { changeDirection } from './snake/changeDirection.js'
 
 let lastRenderTime = 0
 
@@ -19,8 +16,6 @@ const runGame = (currentTime) => {
   if (secondsSinceLastRender < 1 / SNAKE_SPEED) return
 
   lastRenderTime = currentTime
-
-  console.log('secondsSinceLastRender', secondsSinceLastRender)
 
   drawGame()
   updateGame()
@@ -37,7 +32,7 @@ export const updateGame = () => {
     eatFood()
     return
   }
-  updateSnake()
+  moveSnake()
 }
 
 export const drawGame = () => {
