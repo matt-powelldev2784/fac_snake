@@ -18,7 +18,7 @@
 }
 
 .snake {
-  background-color: red;
+  background-color: var(--snake-grey);
   z-index: 10;
 }
 

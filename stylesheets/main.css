@@ -1,5 +1,6 @@
 :root {
-  --screen-grey: rgb(87, 90, 87);
+  --screen-grey: #b8c400;
+  --snake-grey: #725e05;
 }
 
 body {
