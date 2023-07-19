@@ -1,6 +1,7 @@
 :root {
-  --screen-grey: #b8c400;
-  --snake-grey: #725e05;
+  --screen-grey: #8faf63;
+  --snake-grey: #1e2408;
+  --nokia-bg: #55616f;
 }
 
 @font-face {
@@ -20,6 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: #3b3737;
 }
 
 *,
@@ -50,4 +52,6 @@ a:active {
   font-size: 3rem;
   text-align: center;
   font-family: 'NokiaKokia', sans-serif;
+  color: #e7ecf1;
+  margin-bottom: 1rem;
 }
