@@ -3,8 +3,9 @@ import {
   updateSnake,
   drawSnake,
   checkEdgeCollision,
+  checkFoodCollision,
 } from './snake.js'
-import { addFood, foodOnBoard } from './food.js'
+import { addFood, foodOnBoard, setFoodOnBoard } from './food.js'
 
 let lastRenderTime = 0
 
@@ -26,6 +27,10 @@ const runGame = (currentTime) => {
 window.requestAnimationFrame(runGame)
 
 export const updateGame = () => {
+  if (checkFoodCollision()) {
+    document.querySelector('.food').remove()
+    setFoodOnBoard(false)
+  }
   updateSnake()
 }
 
