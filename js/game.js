@@ -5,6 +5,7 @@ import {
   checkEdgeCollision,
   checkFoodCollision,
   eatFood,
+  changeDirection,
 } from './snake.js'
 import { addFood, foodOnBoard, setFoodOnBoard } from './food.js'
 
@@ -26,6 +27,10 @@ const runGame = (currentTime) => {
 }
 
 window.requestAnimationFrame(runGame)
+
+document.addEventListener('keydown', (event) => {
+  changeDirection(event)
+})
 
 export const updateGame = () => {
   if (checkFoodCollision()) {

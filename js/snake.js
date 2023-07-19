@@ -1,6 +1,6 @@
 import { setFoodOnBoard, foodPosition } from './food.js'
 
-export const SNAKE_SPEED = 1
+export const SNAKE_SPEED = 4
 let moveDirection = 'down'
 
 const snakeBody = [
@@ -81,5 +81,27 @@ const addLengthToSnake = () => {
     case 'right':
       snakeBody.unshift({ x: snakeBody[0].x + 1, y: snakeBody[0].y })
       break
+  }
+}
+
+export const changeDirection = (event) => {
+  console.log('event.key', event.key)
+  if (event.key === 'ArrowUp' && moveDirection !== 'down') {
+    moveDirection = 'up'
+    return
+  }
+  if (event.key === 'ArrowDown' && moveDirection !== 'up') {
+    moveDirection = 'down'
+    return
+  }
+
+  if (event.key === 'ArrowLeft' && moveDirection !== 'right') {
+    moveDirection = 'left'
+    return
+  }
+
+  if (event.key === 'ArrowRight' && moveDirection !== 'left') {
+    moveDirection = 'right'
+    return
   }
 }

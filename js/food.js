@@ -18,12 +18,12 @@ export const addFood = (gameBoard) => {
 }
 
 const getRandomBoardPosition = () => {
-  // return {
-  //   x: Math.floor(Math.random() * 21) + 1,
-  //   y: Math.floor(Math.random() * 21) + 1,
-  // }
   return {
-    x: 10,
-    y: 10,
+    x: Math.floor(Math.random() * 21) + 1,
+    y: Math.floor(Math.random() * 21) + 1,
   }
+  // return {
+  //   x: 10,
+  //   y: 10,
+  // }
 }
