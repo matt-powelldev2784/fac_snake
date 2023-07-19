@@ -17,10 +17,8 @@
 body {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  margin: 0 auto;
+
   background: #3b3737;
 }
 
@@ -46,12 +44,4 @@ a:active {
 *:focus-visible {
   border: 3px solid grey;
   outline: none;
-}
-
-.title {
-  font-size: 3rem;
-  text-align: center;
-  font-family: 'NokiaKokia', sans-serif;
-  color: #e7ecf1;
-  margin-bottom: 1rem;
 }
