@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color: black;
+  background-color: rgb(156, 151, 151);
 }
 
 .game__board {
@@ -23,6 +23,6 @@
 }
 
 .food {
-  background-color: green;
+  background-color: var(--snake-grey);
   z-index: 9;
 }

@@ -3,12 +3,18 @@
   --snake-grey: #725e05;
 }
 
+@font-face {
+  font-family: 'Pixeboy';
+  src: url('/assets/Pixeboy-z8XGD.ttf') format('truetype');
+}
+
 body {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 *,
@@ -18,7 +24,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Pixeboy', sans-serif;
   /* border: 1px solid green; */
 }
 
@@ -33,4 +39,11 @@ a:active {
 *:focus-visible {
   border: 3px solid grey;
   outline: none;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Pixeboy', sans-serif;
 }
