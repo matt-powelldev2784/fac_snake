@@ -2,6 +2,7 @@ import { setFoodOnBoard, foodPosition } from './food.js'
 
 export const SNAKE_SPEED = 4
 let moveDirection = 'down'
+let hasMoved = true
 
 const snakeBody = [
   { x: 10, y: 8 },
@@ -45,6 +46,7 @@ const moveSnake = () => {
       snakeBody.pop(snakeBody[snakeBody.length - 1])
       break
   }
+  hasMoved = true
 }
 
 export const checkEdgeCollision = () => {
@@ -85,23 +87,27 @@ const addLengthToSnake = () => {
 }
 
 export const changeDirection = (event) => {
-  console.log('event.key', event.key)
+  if (!hasMoved) return
   if (event.key === 'ArrowUp' && moveDirection !== 'down') {
     moveDirection = 'up'
+    hasMoved = false
     return
   }
   if (event.key === 'ArrowDown' && moveDirection !== 'up') {
     moveDirection = 'down'
+    hasMoved = false
     return
   }
 
   if (event.key === 'ArrowLeft' && moveDirection !== 'right') {
     moveDirection = 'left'
+    hasMoved = false
     return
   }
 
   if (event.key === 'ArrowRight' && moveDirection !== 'left') {
     moveDirection = 'right'
+    hasMoved = false
     return
   }
 }
