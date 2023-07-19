@@ -8,6 +8,11 @@
   src: url('/assets/Pixeboy-z8XGD.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'NokiaKokia';
+  src: url('/assets/NokiaKokia.ttf') format('truetype');
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -44,6 +49,5 @@ a:active {
 .title {
   font-size: 3rem;
   text-align: center;
-  margin-bottom: 1rem;
-  font-family: 'Pixeboy', sans-serif;
+  font-family: 'NokiaKokia', sans-serif;
 }
