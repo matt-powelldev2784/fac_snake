@@ -4,7 +4,7 @@ import {
   drawSnake,
   checkSnakeCollision,
 } from './snake.js'
-import { addFood } from './food.js'
+import { addFood, foodOnBoard } from './food.js'
 
 let lastRenderTime = 0
 
@@ -33,7 +33,5 @@ export const drawGame = () => {
   const gameBoard = document.getElementById('game__board')
 
   drawSnake(gameBoard)
+  if (!foodOnBoard) addFood(gameBoard)
 }
-
-const gameBoard = document.getElementById('game__board')
-addFood(gameBoard)

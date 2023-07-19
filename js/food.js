@@ -1,3 +1,5 @@
+export let foodOnBoard = false
+
 export const addFood = (gameBoard) => {
   const randomCoordinates = getRandomBoardPosition()
   const foodElement = document.createElement('div')
@@ -6,6 +8,7 @@ export const addFood = (gameBoard) => {
   foodElement.style.gridRowStart = randomCoordinates.y
   foodElement.classList.add('food')
   gameBoard.appendChild(foodElement)
+  foodOnBoard = true
 }
 
 const getRandomBoardPosition = () => {
