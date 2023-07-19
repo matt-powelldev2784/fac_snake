@@ -2,14 +2,14 @@ import {
   SNAKE_SPEED,
   updateSnake,
   drawSnake,
-  checkSnakeCollision,
+  checkEdgeCollision,
 } from './snake.js'
 import { addFood, foodOnBoard } from './food.js'
 
 let lastRenderTime = 0
 
 const runGame = (currentTime) => {
-  if (checkSnakeCollision()) return alert('You lose!')
+  if (checkEdgeCollision()) return alert('You lose!')
 
   window.requestAnimationFrame(runGame)
   const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000

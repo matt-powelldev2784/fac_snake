@@ -45,7 +45,7 @@ const moveSnake = () => {
   }
 }
 
-export const checkSnakeCollision = () => {
+export const checkEdgeCollision = () => {
   const xCollision = snakeBody[0].x < 0 || snakeBody[0].x > 22 ? true : false
   const yCollision = snakeBody[0].y < 0 || snakeBody[0].y > 22 ? true : false
   return xCollision || yCollision
