@@ -1,10 +1,11 @@
 export const addFood = (gameBoard) => {
-  console.log('getRandomBoardPosition', getRandomBoardPosition)
+  const randomCoordinates = getRandomBoardPosition()
   const foodElement = document.createElement('div')
-  // snakeElement.style.gridColumnStart = segment.x
-  // snakeElement.style.gridRowStart = segment.y
-  // snakeElement.classList.add('snake')
-  // gameBoard.appendChild(foodElement)
+
+  foodElement.style.gridColumnStart = randomCoordinates.x
+  foodElement.style.gridRowStart = randomCoordinates.y
+  foodElement.classList.add('food')
+  gameBoard.appendChild(foodElement)
 }
 
 const getRandomBoardPosition = () => {

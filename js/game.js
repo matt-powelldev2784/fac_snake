@@ -10,7 +10,7 @@ let lastRenderTime = 0
 
 const runGame = (currentTime) => {
   if (checkSnakeCollision()) return alert('You lose!')
-  
+
   window.requestAnimationFrame(runGame)
   const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
   if (secondsSinceLastRender < 1 / SNAKE_SPEED) return
@@ -35,4 +35,5 @@ export const drawGame = () => {
   drawSnake(gameBoard)
 }
 
-addFood()
+const gameBoard = document.getElementById('game__board')
+addFood(gameBoard)
