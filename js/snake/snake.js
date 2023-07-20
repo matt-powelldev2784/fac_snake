@@ -6,6 +6,10 @@ export const snakeBody = [
   { x: 10, y: 8 },
   { x: 9, y: 8 },
   { x: 8, y: 8 },
+  { x: 7, y: 8 },
+  { x: 6, y: 8 },
+  { x: 5, y: 8 },
+  { x: 4, y: 8 },
 ]
 
 export const setMoveDirection = (direction) => {

@@ -23,7 +23,10 @@ startGameElement.addEventListener('click', () => {
 })
 
 export const runGame = (currentTime) => {
-  handleGameOver()
+  if (checkEdgeCollision() || checkSnakeOnSnakeCollision()) {
+    handleGameOver()
+    return
+  }
 
   window.requestAnimationFrame(runGame)
   const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
@@ -55,13 +58,11 @@ export const drawGame = () => {
 }
 
 const handleGameOver = () => {
-  if (checkEdgeCollision() || checkSnakeOnSnakeCollision()) {
-    const gameOverElement = document.getElementById('game__game-over-text')
-    gameOverElement.style.display = 'block'
-    document.querySelectorAll('.snake').forEach((snakeElement) => {
-      snakeElement.remove()
-    })
-    const food = document.getElementById('food')
-    if (food) food.remove()
-  }
+  document.querySelectorAll('.snake').forEach((snakeElement) => {
+    snakeElement.remove()
+  })
+  const food = document.getElementById('food')
+  if (food) food.remove()
+  const gameOverElement = document.getElementById('game__game-over-text')
+  gameOverElement.style.display = 'block'
 }
