@@ -8,9 +8,12 @@ import {
   checkSnakeOnSnakeCollision,
 } from './snake/collision.js'
 import { eatFood } from './snake/eatFood.js'
-import { startEventListeners } from './eventListeners/startEventListeners.js'
+import {
+  startGameListeners,
+  gameOverListeners,
+} from './eventListeners/eventListeners.js'
 
-startEventListeners()
+startGameListeners()
 
 let lastRenderTime = 0
 export const runGame = (currentTime) => {
@@ -54,12 +57,5 @@ const handleGameOver = () => {
   const gameOverElement = document.getElementById('game__game-over-text')
   gameOverElement.style.display = 'block'
 
-  const screenElement = document.getElementById('game__board')
-  screenElement.addEventListener('click', () => {
-    window.location.reload()
-  })
-
-  gameOverElement.addEventListener('click', () => {
-    window.location.reload()
-  })
+  gameOverListeners()
 }
