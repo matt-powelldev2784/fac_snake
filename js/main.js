@@ -63,6 +63,16 @@ const handleGameOver = () => {
   })
   const food = document.getElementById('food')
   if (food) food.remove()
+
   const gameOverElement = document.getElementById('game__game-over-text')
   gameOverElement.style.display = 'block'
+
+  const screenElement = document.getElementById('game__board')
+  screenElement.addEventListener('click', () => {
+    window.location.reload()
+  })
+
+  gameOverElement.addEventListener('click', () => {
+    window.location.reload()
+  })
 }
