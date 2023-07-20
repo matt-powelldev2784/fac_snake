@@ -1,10 +1,11 @@
 import { setFoodOnBoard } from '../food/food.js'
-import { moveDirection, snakeBody } from './snake.js'
+import { moveDirection, snakeBody, increaseGameSpeed } from './snake.js'
 
 export const eatFood = () => {
   document.querySelector('.food').remove()
   setFoodOnBoard(false)
   addLengthToSnake()
+  increaseGameSpeed()
 }
 
 const addLengthToSnake = () => {

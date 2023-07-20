@@ -19,10 +19,10 @@ const getNextFoodImage = () => {
 export const addFood = (gameBoard) => {
   const randomCoordinates = getRandomBoardPosition()
   foodPosition = randomCoordinates
+
   const foodElement = document.createElement('div')
   const image = document.createElement('img')
   const nextFoodImage = getNextFoodImage()
-  console.log('nextFoodImage', nextFoodImage)
   image.src = `./assets/food/${nextFoodImage}`
   foodElement.appendChild(image)
 
@@ -31,6 +31,7 @@ export const addFood = (gameBoard) => {
   foodElement.classList.add('food')
   foodElement.id = 'food'
   gameBoard.appendChild(foodElement)
+
   foodOnBoard = true
 }
 

@@ -1,4 +1,4 @@
-export const SNAKE_SPEED = 4
+export let SNAKE_SPEED = 4
 export let moveDirection = 'down'
 export let hasMoved = true
 
@@ -18,4 +18,8 @@ export const setMoveDirection = (direction) => {
 
 export const setHasMoved = (bollean) => {
   hasMoved = bollean
+}
+
+export const increaseGameSpeed = () => {
+  SNAKE_SPEED += 1
 }
