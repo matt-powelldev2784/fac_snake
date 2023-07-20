@@ -1,4 +1,5 @@
 import { foodImageList } from './foodImageList.js'
+import { snakeBody } from '../snake/snake.js'
 
 export let foodOnBoard = false
 export let foodPosition = null
@@ -18,6 +19,7 @@ const getNextFoodImage = () => {
 
 export const addFood = (gameBoard) => {
   const randomCoordinates = getRandomBoardPosition()
+
   foodPosition = randomCoordinates
 
   const foodElement = document.createElement('div')
@@ -36,8 +38,19 @@ export const addFood = (gameBoard) => {
 }
 
 const getRandomBoardPosition = () => {
-  return {
+  const randomCoordinates = {
     x: Math.floor(Math.random() * 21) + 1,
     y: Math.floor(Math.random() * 21) + 1,
+  }
+
+  for (let i = 0; i < snakeBody.length; i++) {
+    if (
+      snakeBody[i].x === randomCoordinates.x &&
+      snakeBody[i].y === randomCoordinates.y
+    ) {
+      return getRandomBoardPosition()
+    }
+
+    return randomCoordinates
   }
 }
