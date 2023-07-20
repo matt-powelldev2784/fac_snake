@@ -11,9 +11,13 @@ export const setFoodOnBoard = (value) => {
 let nextFoodImage = 0
 
 const getNextFoodImage = () => {
+  if (nextFoodImage >= foodImageList.length) {
+    nextFoodImage = 0
+    document.getElementById('game__fac-dead').style.display = 'block'
+  }
   const nextImage = foodImageList[nextFoodImage]
   nextFoodImage++
-  if (nextFoodImage >= foodImageList.length) nextFoodImage = 0
+
   return nextImage
 }
 
