@@ -41,7 +41,7 @@
 @media only screen and (max-width: 800px) {
   .game__game-over-text {
     transform: unset;
-    top: 7.25rem;
+    top: 5.25rem;
     left: unset;
     font-size: 2.5rem;
   }
