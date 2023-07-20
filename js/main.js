@@ -26,7 +26,7 @@ export const runGame = (currentTime) => {
 
   window.requestAnimationFrame(runGame)
   const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
-  if (secondsSinceLastRender < 1 / SNAKE_SPEED) return
+  if (secondsSinceLastRender < 0.5 / SNAKE_SPEED) return
 
   lastRenderTime = currentTime
 
