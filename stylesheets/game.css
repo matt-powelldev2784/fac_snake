@@ -19,8 +19,8 @@
   align-items: center;
   flex-direction: column;
   margin: 0;
-  width: 1200px;
-  height: 1500px;
+  width: 1150px;
+  height: 750px;
   background-color: var(--nokia-bg);
   border-radius: 32px;
   margin: 0 auto;
@@ -31,19 +31,25 @@
 @media only screen and (max-width: 1200px) {
   .game {
     width: 950px;
-    height: 750px;
+    height: 650px;
   }
 }
 @media only screen and (max-width: 1000px) {
   .game {
-    width: 750px;
-    height: 600px;
+    width: 625px;
+    height: 500px;
   }
 }
 @media only screen and (max-width: 800px) {
   .game {
     width: 340px;
     height: 700px;
+  }
+}
+@media only screen and (max-width: 321px) {
+  .game {
+    width: 300px;
+    height: 500px;
   }
 }
 
@@ -79,6 +85,16 @@
   .game__board {
     background-color: var(--screen-grey);
     width: 300px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+  }
+}
+@media only screen and (max-width: 321px) {
+  .game__board {
+    background-color: var(--screen-grey);
+    width: 280px;
     height: 200px;
     display: grid;
     grid-template-columns: repeat(30, 1fr);
