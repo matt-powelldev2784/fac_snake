@@ -32,7 +32,6 @@
   background: none;
   border: none;
   outline: none;
-  border: 2px solid green;
 }
 @media only screen and (max-width: 1000px) {
   .game__game-over-text {

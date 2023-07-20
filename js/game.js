@@ -29,8 +29,7 @@ const startGame = () => {
 }
 
 const runGame = (currentTime) => {
-  if (checkEdgeCollision()) return alert('You lose!')
-  if (checkSnakeOnSnakeCollision()) return alert('You lose!')
+  handleGameOver()
 
   window.requestAnimationFrame(runGame)
   const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
@@ -59,4 +58,13 @@ export const drawGame = () => {
 
   drawSnake(gameBoard)
   if (!foodOnBoard) addFood(gameBoard)
+}
+
+const handleGameOver = () => {
+  if (checkEdgeCollision() || checkSnakeOnSnakeCollision()) {
+    const gameOverElement = document.getElementById('game__game-over-text')
+    gameOverElement.style.display = 'block'
+    document.getElementById('snake').remove()
+    document.getElementById('food').remove()
+  }
 }

@@ -13,6 +13,7 @@ export const addFood = (gameBoard) => {
   foodElement.style.gridColumnStart = randomCoordinates.x
   foodElement.style.gridRowStart = randomCoordinates.y
   foodElement.classList.add('food')
+  foodElement.id = 'food'
   gameBoard.appendChild(foodElement)
   foodOnBoard = true
 }
@@ -22,8 +23,4 @@ const getRandomBoardPosition = () => {
     x: Math.floor(Math.random() * 21) + 1,
     y: Math.floor(Math.random() * 21) + 1,
   }
-  // return {
-  //   x: 10,
-  //   y: 10,
-  // }
 }
