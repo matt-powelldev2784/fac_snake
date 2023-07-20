@@ -64,7 +64,9 @@ const handleGameOver = () => {
   if (checkEdgeCollision() || checkSnakeOnSnakeCollision()) {
     const gameOverElement = document.getElementById('game__game-over-text')
     gameOverElement.style.display = 'block'
-    document.getElementById('snake').remove()
+    document.querySelectorAll('.snake').forEach((snakeElement) => {
+      snakeElement.remove()
+    })
     document.getElementById('food').remove()
   }
 }

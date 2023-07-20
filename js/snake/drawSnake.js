@@ -9,7 +9,6 @@ export const drawSnake = (gameBoard) => {
     snakeElement.style.gridColumnStart = segment.x
     snakeElement.style.gridRowStart = segment.y
     snakeElement.classList.add('snake')
-    snakeElement.id = 'snake'
     gameBoard.appendChild(snakeElement)
   }
 }
