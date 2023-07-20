@@ -12,6 +12,14 @@ import { changeDirection } from './snake/changeDirection.js'
 
 let lastRenderTime = 0
 
+const screenElement = document.getElementById('game__board')
+screenElement.addEventListener('click', () => {
+  document.getElementById('start__game_text').style.display = 'none'
+  setTimeout(() => {
+    window.requestAnimationFrame(runGame)
+  }, 500)
+})
+
 const runGame = (currentTime) => {
   if (checkEdgeCollision()) return alert('You lose!')
   if (checkSnakeOnSnakeCollision()) return alert('You lose!')
@@ -25,8 +33,6 @@ const runGame = (currentTime) => {
   drawGame()
   updateGame()
 }
-
-window.requestAnimationFrame(runGame)
 
 document.addEventListener('keydown', (event) => {
   changeDirection(event)
