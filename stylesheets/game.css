@@ -108,6 +108,11 @@
 }
 
 .food {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--snake-grey);
   z-index: 9;
+  overflow: hidden
+  clip-path: circle();
 }
