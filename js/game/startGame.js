@@ -1,4 +1,4 @@
-import { runGame } from '../game.js'
+import { runGame } from '../main.js'
 
 export const startGame = () => {
   const startGameElement = document.getElementById('game__start-game-text')
