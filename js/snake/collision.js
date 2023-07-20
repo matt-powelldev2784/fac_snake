@@ -1,6 +1,5 @@
 import { snakeBody } from './snake.js'
-import { foodPosition } from '../food.js'
-
+import { foodPosition } from '../food/food.js'
 
 export const checkEdgeCollision = () => {
   const xCollision = snakeBody[0].x < 0 || snakeBody[0].x > 31 ? true : false

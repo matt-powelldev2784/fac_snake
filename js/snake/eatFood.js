@@ -1,4 +1,4 @@
-import { setFoodOnBoard } from '../food.js'
+import { setFoodOnBoard } from '../food/food.js'
 import { moveDirection, snakeBody } from './snake.js'
 
 export const eatFood = () => {

@@ -1,6 +1,6 @@
 import { SNAKE_SPEED } from './snake/snake.js'
 import { drawSnake } from './snake/drawSnake.js'
-import { addFood, foodOnBoard } from './food.js'
+import { addFood, foodOnBoard } from './food/food.js'
 import { moveSnake } from './snake/moveSnake.js'
 import {
   checkEdgeCollision,
