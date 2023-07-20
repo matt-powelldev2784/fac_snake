@@ -1,4 +1,4 @@
-.title {
+.game__title {
   font-size: 3rem;
   text-align: center;
   font-family: 'NokiaKokia', sans-serif;
@@ -7,7 +7,7 @@
   margin-bottom: 1rem;
 }
 @media only screen and (max-width: 800px) {
-  .title {
+  .game__title {
     font-size: 1.75rem;
   }
 }

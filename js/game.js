@@ -14,11 +14,19 @@ let lastRenderTime = 0
 
 const screenElement = document.getElementById('game__board')
 screenElement.addEventListener('click', () => {
-  document.getElementById('start__game_text').style.display = 'none'
+  startGame()
+})
+const startGameElement = document.getElementById('game__start-game-text')
+startGameElement.addEventListener('click', () => {
+  startGame()
+})
+
+const startGame = () => {
+  startGameElement.style.display = 'none'
   setTimeout(() => {
     window.requestAnimationFrame(runGame)
   }, 500)
-})
+}
 
 const runGame = (currentTime) => {
   if (checkEdgeCollision()) return alert('You lose!')
