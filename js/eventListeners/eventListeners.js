@@ -43,4 +43,10 @@ export const addGameOverListeners = () => {
   gameOverElement.addEventListener('click', () => {
     window.location.reload()
   })
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key == 'Enter') {
+      window.location.reload()
+    }
+  })
 }
