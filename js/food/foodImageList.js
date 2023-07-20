@@ -1,6 +1,6 @@
 export const foodImageList = [
-  // 'carlos.jpg',
-  // 'deepa.jpg',
+  'carlos.jpg',
+  'deepa.jpg',
   'dylan.jpg',
   'elena.jpg',
   'eun.jpg',
