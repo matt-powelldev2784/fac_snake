@@ -9,6 +9,7 @@ import {
 } from './snake/collision.js'
 import { eatFood } from './snake/eatFood.js'
 import { changeDirection } from './snake/changeDirection.js'
+import { startGame } from './game/startGame.js'
 
 let lastRenderTime = 0
 
@@ -21,14 +22,7 @@ startGameElement.addEventListener('click', () => {
   startGame()
 })
 
-const startGame = () => {
-  startGameElement.style.display = 'none'
-  setTimeout(() => {
-    window.requestAnimationFrame(runGame)
-  }, 500)
-}
-
-const runGame = (currentTime) => {
+export const runGame = (currentTime) => {
   handleGameOver()
 
   window.requestAnimationFrame(runGame)
@@ -67,6 +61,7 @@ const handleGameOver = () => {
     document.querySelectorAll('.snake').forEach((snakeElement) => {
       snakeElement.remove()
     })
-    document.getElementById('food').remove()
+    const food = document.getElementById('food')
+    if (food) food.remove()
   }
 }
