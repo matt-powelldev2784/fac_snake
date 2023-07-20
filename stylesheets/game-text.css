@@ -46,3 +46,30 @@
     font-size: 2.5rem;
   }
 }
+
+.game__fac-dead {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  outline: none;
+  line-height: 4rem;
+  color: rgb(169, 190, 154);
+  overflow: hidden;
+}
+@media only screen and (max-width: 1000px) {
+  .game__fac-dead {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    width: 80%;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .game__fac-dead {
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
