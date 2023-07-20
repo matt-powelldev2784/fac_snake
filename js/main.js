@@ -12,8 +12,10 @@ import {
   addStartGameListeners,
   addGameOverListeners,
 } from './eventListeners/eventListeners.js'
+import { loadfoodImages } from './food/loadFoodImages.js'
 
 addStartGameListeners()
+loadfoodImages()
 
 let lastRenderTime = 0
 export const runGame = (currentTime) => {
