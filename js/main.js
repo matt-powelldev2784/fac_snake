@@ -9,11 +9,11 @@ import {
 } from './snake/collision.js'
 import { eatFood } from './snake/eatFood.js'
 import {
-  startGameListeners,
-  gameOverListeners,
+  addStartGameListeners,
+  addGameOverListeners,
 } from './eventListeners/eventListeners.js'
 
-startGameListeners()
+addStartGameListeners()
 
 let lastRenderTime = 0
 export const runGame = (currentTime) => {
@@ -57,5 +57,5 @@ const handleGameOver = () => {
   const gameOverElement = document.getElementById('game__game-over-text')
   gameOverElement.style.display = 'block'
 
-  gameOverListeners()
+  addGameOverListeners()
 }
