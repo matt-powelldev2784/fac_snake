@@ -8,17 +8,9 @@ import {
   checkSnakeOnSnakeCollision,
 } from './snake/collision.js'
 import { eatFood } from './snake/eatFood.js'
-import { changeDirection } from './snake/changeDirection.js'
-import { startGame } from './game/startGame.js'
+import { startEventListeners } from './eventListeners/startEventListeners.js'
 
-const screenElement = document.getElementById('game__board')
-screenElement.addEventListener('click', () => {
-  startGame()
-})
-const startGameElement = document.getElementById('game__start-game-text')
-startGameElement.addEventListener('click', () => {
-  startGame()
-})
+startEventListeners()
 
 let lastRenderTime = 0
 export const runGame = (currentTime) => {
@@ -36,10 +28,6 @@ export const runGame = (currentTime) => {
   drawGame()
   updateGame()
 }
-
-document.addEventListener('keydown', (event) => {
-  changeDirection(event)
-})
 
 export const updateGame = () => {
   if (checkFoodCollision()) {
