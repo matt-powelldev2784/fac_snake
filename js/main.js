@@ -11,8 +11,6 @@ import { eatFood } from './snake/eatFood.js'
 import { changeDirection } from './snake/changeDirection.js'
 import { startGame } from './game/startGame.js'
 
-let lastRenderTime = 0
-
 const screenElement = document.getElementById('game__board')
 screenElement.addEventListener('click', () => {
   startGame()
@@ -22,6 +20,7 @@ startGameElement.addEventListener('click', () => {
   startGame()
 })
 
+let lastRenderTime = 0
 export const runGame = (currentTime) => {
   if (checkEdgeCollision() || checkSnakeOnSnakeCollision()) {
     handleGameOver()
