@@ -11,12 +11,14 @@ import { eatFood } from './snake/eatFood.js'
 import {
   addStartGameListeners,
   addGameOverListeners,
+  addSoundListeners,
 } from './eventListeners/eventListeners.js'
 import { loadfoodImages } from './food/loadFoodImages.js'
 import { setHighScore } from './score/score.js'
 
 addStartGameListeners()
 loadfoodImages()
+addSoundListeners()
 
 let lastRenderTime = 0
 export const runGame = (currentTime) => {

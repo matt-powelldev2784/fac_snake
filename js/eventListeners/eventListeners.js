@@ -50,3 +50,13 @@ export const addGameOverListeners = () => {
     }
   })
 }
+
+const playSound = () => {
+  const audio = new Audio('../assets/nokia_hello.mp3')
+  audio.play()
+}
+
+export const addSoundListeners = () => {
+  const titleElement = document.getElementById('game__title')
+  titleElement.addEventListener('click', playSound)
+}
