@@ -1,5 +1,5 @@
 import { startGame } from '../game/startGame.js'
-import { changeDirection } from '../snake/changeDirection.js'
+import { changeDirection } from '../snake/changeDirectionKeys.js'
 
 const handleStartGame = () => {
   startGame()
