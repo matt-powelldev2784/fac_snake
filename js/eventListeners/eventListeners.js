@@ -51,9 +51,18 @@ export const addGameOverListeners = () => {
   })
 }
 
+let playingSound = false
+
 const playSound = () => {
   const audio = new Audio('../assets/nokia_hello.mp3')
+  if (playingSound) return
+
+  playingSound = true
   audio.play()
+
+  setTimeout(() => {
+    playingSound = false
+  }, 8000)
 }
 
 export const addSoundListeners = () => {
