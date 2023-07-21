@@ -49,7 +49,7 @@
   .game {
     width: 340px;
     height: 550px;
-    overflow-y: hidden;
+    overflow-x: hidden;
   }
 }
 @media only screen and (max-width: 321px) {
