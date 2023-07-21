@@ -19,7 +19,11 @@ body {
   height: 100vh;
   margin: 0 auto;
   background: #3b3737;
-  overflow: hidden;
+}
+@media only screen and (max-width: 800px) {
+  body {
+    overflow-y: hidden;
+  }
 }
 
 *,
