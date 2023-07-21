@@ -6,6 +6,11 @@
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
+@media only screen and (max-width: 1000px) {
+  .game__title {
+    font-size: 1.5rem;
+  }
+}
 @media only screen and (max-width: 800px) {
   .game__title {
     font-size: 1.75rem;

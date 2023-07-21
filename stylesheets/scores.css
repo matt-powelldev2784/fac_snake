@@ -1,0 +1,109 @@
+.game__high-score-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0.75rem;
+  right: 6.55rem;
+  border: 4px dotted white;
+  padding: 0.5rem;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  color: white;
+}
+@media only screen and (max-width: 1000px) {
+  .game__high-score-container {
+    line-height: 1rem;
+    top: 0.5rem;
+    padding: 0.4rem;
+    right: 4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .game__high-score-container {
+    line-height: 1.5rem;
+    top: 23rem;
+    right: unset;
+    padding: 0.4rem;
+    width: 80%;
+  }
+}
+
+.game__high-score-text {
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 1000px) {
+  .game__high-score-text {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .game__high-score-text {
+    font-size: 1.5rem;
+  }
+}
+
+.game__high-score {
+  font-size: 2rem;
+}
+@media only screen and (max-width: 1000px) {
+  .game__high-score {
+    font-size: 1.8rem;
+  }
+}
+
+.game__score-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0.75rem;
+  left: 6.55rem;
+  border: 4px dotted white;
+  padding: 0.5rem;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  color: white;
+}
+@media only screen and (max-width: 1000px) {
+  .game__score-container {
+    line-height: 1rem;
+    top: 0.5rem;
+    padding: 0.4rem;
+    left: 4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .game__score-container {
+    line-height: 1.5rem;
+    top: 18rem;
+    left: unset;
+    padding: 0.4rem;
+    width: 80%;
+  }
+}
+
+.game__score-text {
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 1000px) {
+  .game__score-text {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .game__score-text {
+    font-size: 1.5rem;
+  }
+}
+
+.game__score {
+  font-size: 2rem;
+}
+@media only screen and (max-width: 1000px) {
+  .game__score {
+    font-size: 1.8rem;
+  }
+}

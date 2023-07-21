@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="stylesheets/main.css" />
     <link rel="stylesheet" href="stylesheets/game.css" />
     <link rel="stylesheet" href="stylesheets/game-text.css" />
+    <link rel="stylesheet" href="stylesheets/scores.css" />
 
     <title>Snake</title>
     <script type="module" src="js/main.js"></script>
@@ -21,6 +22,16 @@
   <body>
     <section class="game">
       <p class="game__title">FACIA</p>
+
+      <div class="game__high-score-container">
+        <p class="game__high-score-text">High Score</p>
+        <p class="game__high-score">00000</p>
+      </div>
+
+      <div class="game__score-container">
+        <p class="game__score-text">Score</p>
+        <p class="game__score">00000</p>
+      </div>
 
       <button class="game__start-game-text" id="game__start-game-text">
         <p>Touch Screen to</p>
