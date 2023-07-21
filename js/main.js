@@ -13,6 +13,7 @@ import {
   addGameOverListeners,
 } from './eventListeners/eventListeners.js'
 import { loadfoodImages } from './food/loadFoodImages.js'
+import { setHighScore } from './score/score.js'
 
 addStartGameListeners()
 loadfoodImages()
@@ -59,5 +60,6 @@ const handleGameOver = () => {
   const gameOverElement = document.getElementById('game__game-over-text')
   gameOverElement.style.display = 'block'
 
+  setHighScore()
   addGameOverListeners()
 }
